@@ -1,7 +1,7 @@
 // Hill cipher
 #include<bits/stdc++.h>
 using namespace std;
-// Convert key into n*n matrix where n is given by user and plain text is partioned into n parts
+// Convert key into n*n matrix where n is given by user and plain text is partitioned into n parts
 vector<vector<int>> multiply(vector<vector<int>> &A, vector<vector<int>> &B) {
     int n = A.size();
     int m = A[0].size();
@@ -67,4 +67,5 @@ int main(){
     }
     cout<<"Decrypted Text : "<<plain<<endl;
     return 0;
+
 }
