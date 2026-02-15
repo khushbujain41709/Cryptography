@@ -11,13 +11,13 @@ int main(){
     cout<<"Enter any capital key : ";
     string key;
     cin>>key;
-    unordered_set<char> ms, mk;
-    for(int i = 0; i<key.size(); i++){
-        mk.insert(key[i]);
-    }
-    for(int i = 0; i<s.size(); i++){
-        ms.insert(s[i]);
-    }
+    // unordered_set<char> ms, mk;
+    // for(int i = 0; i<key.size(); i++){
+    //     mk.insert(key[i]);
+    // }
+    // for(int i = 0; i<s.size(); i++){
+    //     ms.insert(s[i]);
+    // }
     // 5*5 matrix formation
     vector<vector<char>> v(5, vector<char>(5, ' '));
     vector<bool> used(26, false);
@@ -72,9 +72,9 @@ int main(){
 
     // Encryption
     string cipher = "";
-    for(int i = 0; i<diagrams.size(); i++){
-        int c1 = diagrams[i][0];
-        int c2 = diagrams[i][1];
+    for(int k = 0; k<diagrams.size(); k++){
+        int c1 = diagrams[k][0];
+        int c2 = diagrams[k][1];
         int r1, r2, c1_pos, c2_pos;
         for(int i = 0; i<5; i++){
             for(int j = 0; j<5; j++){
@@ -108,9 +108,9 @@ int main(){
 
     // Decryption
     string plain = "";
-    for(int i = 0; i<cipher.size(); i+=2){
-        int c1 = cipher[i];
-        int c2 = cipher[i+1];
+    for(int k = 0; k<cipher.size(); k+=2){
+        int c1 = cipher[k];
+        int c2 = cipher[k+1];
         int r1, r2, c1_pos, c2_pos;
         for(int i = 0; i<5; i++){
             for(int j = 0; j<5; j++){
